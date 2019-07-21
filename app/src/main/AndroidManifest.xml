@@ -9,14 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DetailBukuActivity">
-
-        </activity>
+        <activity android:name=".DetailBukuYangDipinjamActivity"></activity>
+        <activity android:name=".DetailBukuActivity"></activity>
         <activity android:name=".EditProfileActivity" />
         <activity android:name=".KoleksiBukuActivity" />
         <activity android:name=".TopUpActivity" />
         <activity android:name=".test" />
-        <activity android:name=".PinjamBukuActivity" />
+        <activity android:name=".PinjamBukuActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".UnggahBukuActivity" />
         <activity android:name=".BerandaActivity" />
@@ -24,11 +29,7 @@
             android:name=".SplashActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
     </application>

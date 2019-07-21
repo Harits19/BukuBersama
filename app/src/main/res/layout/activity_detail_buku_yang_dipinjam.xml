@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context=".DetailBukuActivity">
+    tools:context=".DetailBukuYangDipinjamActivity">
 
     <RelativeLayout
         android:id="@+id/relativelayout1"
@@ -56,7 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/relativelayout1"
-       android:layout_margin="8dp"
+        android:layout_margin="8dp"
         android:background="@drawable/layout_round_corner_bg">
 
         <LinearLayout
@@ -203,7 +203,7 @@
                 android:layout_alignParentBottom="true"
 
                 android:elevation="1dp"
-                android:text="Edit"
+                android:text="Pinjam"
                 android:textAllCaps="false"
                 android:textSize="20sp"
                 android:textStyle="normal" />
