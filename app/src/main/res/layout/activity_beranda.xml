@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    tools:context=".BerandaActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/relativelayout2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/line">
+
+        <TextView
+            android:id="@+id/saldotextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Saldo"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:typeface="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/saldotextview"
+            android:layout_marginTop="8dp"
+            android:text="Rp"
+            android:textColor="#FFEB3B"
+            android:textSize="20sp"
+            android:typeface="normal"
+            app:layout_constraintStart_toStartOf="@+id/saldotextview"
+            app:layout_constraintTop_toBottomOf="@+id/saldotextview" />
+
+        <TextView
+            android:id="@+id/jumlahsaldo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/saldotextview"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/rp"
+            android:paddingLeft="8dp"
+            android:text="75.000,-"
+            android:textColor="#FFEB3B"
+            android:textSize="30sp"
+            android:textStyle=""
+            android:typeface="normal"
+            app:layout_constraintStart_toEndOf="@+id/rp"
+            app:layout_constraintTop_toBottomOf="@+id/saldotextview" />
+
+        <Button
+            android:id="@+id/topupButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#4CB3C4"
+            android:elevation="5dp"
+            android:text="Top Up"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/editprofile_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:layout_marginTop="50dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_imageview"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_profile" />
+
+        <TextView
+            android:id="@+id/nama_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_imageview"
+            android:layout_centerHorizontal="true"
+            android:maxLength="10"
+            android:text="Hilmi Aziz"
+            android:textColor="#ECFCFF"
+            android:textSize="30sp"
+            android:textStyle="normal" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/editprofile_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#59A094" />
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/relativelayout2"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/layout_round_corner_bg"
+        android:elevation="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Dipinjam"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="2"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Meminjam"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="15"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/koleksiLayout"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Koleksi"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="12"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/detailprofile_layout"-->
+    <!--android:layout_below="@id/editprofile_layout"-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:elevation="5dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:background="@drawable/layout_round_corner_bg">-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/saldo_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_marginBottom="20dp"-->
+    <!--android:background="@drawable/layout_round_corner_bg">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="25sp"-->
+    <!--android:text="Saldo"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:padding="10dp"-->
+    <!--android:textStyle="normal"-->
+    <!--android:textColor="@color/colorPrimaryDark"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="25sp"-->
+    <!--android:text="Rp 10.000"-->
+    <!--android:maxLength="10"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:padding="10dp"-->
+    <!--android:textStyle="normal"-->
+    <!--android:textColor="@color/colorPrimaryDark"-->
+    <!--/>-->
+
+
+    <!--</RelativeLayout>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/bukusedangdipinjam_button"-->
+    <!--android:layout_below="@id/saldo_layout"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:layout_width="80dp"-->
+    <!--android:layout_height="80dp"-->
+    <!--android:layout_toLeftOf="@id/bukuditukar_button"-->
+    <!--style="@style/CustomButton3"-->
+    <!--android:text="9"-->
+    <!--android:textSize="30sp"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="80dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Buku Sedang Dipinjam"-->
+    <!--android:textSize="15sp"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:textAlignment="center"-->
+    <!--android:textColor="@color/colorPrimaryDark"-->
+    <!--android:layout_toLeftOf="@+id/bukuditukar_textview"-->
+    <!--android:minLines="2"-->
+    <!--android:layout_below="@id/bukusedangdipinjam_button"/>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/bukuditukar_button"-->
+    <!--android:layout_below="@id/saldo_layout"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:layout_width="80dp"-->
+    <!--android:layout_height="80dp"-->
+    <!--style="@style/CustomButton3"-->
+    <!--android:text="9"-->
+    <!--android:textSize="30sp"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/bukuditukar_textview"-->
+    <!--android:layout_width="80dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Buku Ditukar"-->
+    <!--android:textSize="15sp"-->
+    <!--android:layout_margin="10sp"-->
+    <!--android:textAlignment="center"-->
+    <!--android:maxWidth="80dp"-->
+    <!--android:textColor="@color/colorPrimaryDark"-->
+    <!--android:maxLines="2"-->
+    <!--android:layout_below="@id/bukuditukar_button"-->
+    <!--android:layout_centerHorizontal="true"/>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/koleksibuku_button"-->
+    <!--android:layout_below="@id/saldo_layout"-->
+    <!--android:layout_toRightOf="@id/bukuditukar_button"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:layout_width="80dp"-->
+    <!--android:layout_height="80dp"-->
+    <!--style="@style/CustomButton3"-->
+    <!--android:text="9"-->
+    <!--android:textSize="30sp"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="80dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Koleksi Buku"-->
+    <!--android:textSize="15sp"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:textAlignment="center"-->
+    <!--android:textColor="@color/colorPrimaryDark"-->
+    <!--android:layout_toRightOf="@+id/bukuditukar_textview"-->
+    <!--android:minLines="2"-->
+    <!--android:layout_below="@id/bukusedangdipinjam_button"/>-->
+
+
+    <!--</RelativeLayout>-->
+
+
+</RelativeLayout>
