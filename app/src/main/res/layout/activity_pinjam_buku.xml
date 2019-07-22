@@ -64,7 +64,8 @@
 
     <android.support.v7.widget.RecyclerView
         android:layout_below="@+id/tabLayout"
-        android:id="@+id/recycleView1"
+        android:id="@+id/bukuLayout"
+        android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

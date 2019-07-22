@@ -201,7 +201,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_alignParentBottom="true"
-
+                android:onClick="ShowPopup"
                 android:elevation="1dp"
                 android:text="Pinjam"
                 android:textAllCaps="false"

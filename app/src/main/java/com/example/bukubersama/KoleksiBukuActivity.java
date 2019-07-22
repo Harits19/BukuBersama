@@ -1,21 +1,23 @@
 package com.example.bukubersama;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 public class KoleksiBukuActivity extends AppCompatActivity {
+
+    private Button tambahKoleksiBuku, detailBukuButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_koleksi_buku);
 
-        Button tambahKoleksiBuku= findViewById(R.id.tambahKoleksiButton);
-        Button detailBukuButton= findViewById(R.id.detailBukuButton);
+        tambahKoleksiBuku = findViewById(R.id.tambahKoleksiButton);
+        detailBukuButton = findViewById(R.id.detailBukuButton);
 
 
         tambahKoleksiBuku.setOnClickListener(new View.OnClickListener() {
