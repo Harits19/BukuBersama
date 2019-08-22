@@ -206,7 +206,7 @@
                 android:layout_width="100dp"
                 android:layout_height="fill_parent"
                 android:gravity="center"
-                android:text="1000"
+                android:text="999"
                 android:textAlignment="center"
                 android:textColor="@color/colorAccent"
                 android:textSize="30sp"
