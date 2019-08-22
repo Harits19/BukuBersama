@@ -9,24 +9,24 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class BukuAdapter extends RecyclerView.Adapter<BukuAdapter.BukuViewHolder> {
+public class BeritaAdapter extends RecyclerView.Adapter<BeritaAdapter.BeritaViewHolder> {
 
 
-    private ArrayList<Buku> dataList;
+    private ArrayList<Berita> dataList;
 
-    public BukuAdapter(ArrayList<Buku> dataList) {
+    public BeritaAdapter(ArrayList<Berita> dataList) {
         this.dataList = dataList;
     }
 
     @Override
-    public BukuViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public BeritaViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.recycleview_pinjam_buku, parent, false);
-        return new BukuViewHolder(view);
+        View view = layoutInflater.inflate(R.layout.recycleview_berita, parent, false);
+        return new BeritaViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(BukuViewHolder holder, int position) {
+    public void onBindViewHolder(BeritaViewHolder holder, int position) {
 //        holder.judul.setText(dataList.get(position).getJudul());
 
     }
@@ -36,12 +36,12 @@ public class BukuAdapter extends RecyclerView.Adapter<BukuAdapter.BukuViewHolder
         return (dataList != null) ? dataList.size() : 0;
     }
 
-    public class BukuViewHolder extends RecyclerView.ViewHolder {
+    public class BeritaViewHolder extends RecyclerView.ViewHolder {
         private TextView judul;
 
-        public BukuViewHolder(View itemView) {
+        public BeritaViewHolder(View itemView) {
             super(itemView);
-            judul = itemView.findViewById(R.id.judulBuku);
+            judul = itemView.findViewById(R.id.judulBerita);
         }
     }
 }

@@ -14,20 +14,23 @@
         <activity android:name=".EditProfileActivity" />
         <activity android:name=".KoleksiBukuActivity" />
         <activity android:name=".TopUpActivity" />
-        <activity android:name=".PinjamBukuRecycleview" />
-        <activity android:name=".PinjamBukuActivity"></activity>
+        <activity android:name=".PinjamBukuActivity">
+
+        </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".UnggahBukuActivity" />
-        <activity android:name=".BerandaActivity" />
-        <activity
-            android:name=".SplashActivity"
-            android:theme="@style/AppTheme" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".BerandaActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".LoginActivity">
+
         </activity>
         <activity android:name=".MainActivity" />
     </application>

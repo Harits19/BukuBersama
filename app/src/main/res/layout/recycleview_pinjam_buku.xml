@@ -96,7 +96,7 @@
             android:onClick="ShowPopup"
             android:text="Pinjam"
             android:textAllCaps="false"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/sinopsis"
             app:layout_constraintHorizontal_bias="0.0"
@@ -109,3 +109,4 @@
 
 
 </RelativeLayout>
+
