@@ -62,12 +62,12 @@
                     android:layout_width="60dp"
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
-                    android:background="#D5FFFFFF"
+                    android:background="@color/colorHighlight"
                     android:text="Baca"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
                     android:textAllCaps="false"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/colorWhite"
                     android:textSize="12sp" />
             </RelativeLayout>
         </FrameLayout>

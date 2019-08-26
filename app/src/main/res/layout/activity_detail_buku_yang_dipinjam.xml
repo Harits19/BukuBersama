@@ -202,13 +202,33 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/editDetailBukuButton"
+        android:id="@+id/Pesan"
         style="@style/CustomButton1"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:onClick="ShowPopup"
-        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="-10dp"
+        android:elevation="1dp"
+        android:text="Pesan"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/Pinjam"
+        style="@style/CustomButton2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/Pesan"
+        android:layout_alignParentBottom="true"
+        android:onClick="ShowPopup"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
         android:elevation="1dp"
         android:text="Pinjam"
         android:textAllCaps="false"

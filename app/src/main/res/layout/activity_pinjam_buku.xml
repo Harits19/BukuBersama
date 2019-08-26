@@ -44,13 +44,11 @@
             android:drawableLeft="@drawable/ic_search_black_24dp"
             android:hint="Search..."
             android:padding="8dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:textColorHint="#87BFC9"
             android:textSize="15sp" />
 
 
         <ImageButton
-            style="@style/CustomButton2"
+            style="@style/CustomButton1"
             android:layout_width="40dp"
             android:layout_height="fill_parent"
             android:layout_gravity="right"

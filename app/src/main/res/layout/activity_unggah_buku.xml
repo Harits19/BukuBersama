@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/uploadButton"
         android:layout_margin="10dp"
-        android:background="@drawable/layout_round_corner_bg">
+      >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,7 +27,8 @@
                 android:gravity="center"
                 android:padding="16dp"
                 android:text="Unggah"
-                android:textColor="#ECFCFF"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"
                 android:textSize="30sp"
                 android:textStyle="normal" />
 
@@ -35,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_marginBottom="16dp"
-                android:background="#ECFCFF"
+                android:background="@color/colorWhite"
                 android:scaleType="center"
                 android:src="@drawable/ic_cloud_upload_black_24dp" />
 
@@ -48,12 +49,10 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"
-                    android:background="#ECFCFF"
+                    android:background="@android:color/transparent"
                     android:drawableLeft="@drawable/ic_tittlebook_24dp"
                     android:hint="Judul Buku"
                     android:padding="8dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textColorHint="#87BFC9"
                     android:textSize="15sp" />
 
             </android.support.v7.widget.CardView>
@@ -66,13 +65,11 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"
-                    android:background="#ECFCFF"
+                    android:background="@android:color/transparent"
                     android:drawableLeft="@drawable/ic_money_24dp"
                     android:hint="Harga Peminjaman"
                     android:inputType="number"
                     android:padding="8dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textColorHint="#87BFC9"
                     android:textSize="15sp" />
 
             </android.support.v7.widget.CardView>
@@ -85,13 +82,11 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"
-                    android:background="#ECFCFF"
+                    android:background="@android:color/transparent"
                     android:drawableLeft="@drawable/ic_money_24dp"
                     android:hint="Harga Jaminan"
                     android:inputType="number"
                     android:padding="8dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textColorHint="#87BFC9"
                     android:textSize="15sp" />
 
             </android.support.v7.widget.CardView>
@@ -104,13 +99,11 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"
-                    android:background="#ECFCFF"
+                    android:background="@android:color/transparent"
                     android:drawableLeft="@drawable/ic_writer_24dp"
                     android:hint="Penulis"
                     android:inputType="textPassword"
                     android:padding="8dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textColorHint="#87BFC9"
                     android:textSize="15sp" />
 
             </android.support.v7.widget.CardView>
@@ -123,13 +116,11 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"
-                    android:background="#ECFCFF"
+                    android:background="@android:color/transparent"
                     android:drawableLeft="@drawable/ic_lock_black_24dp"
                     android:hint="Penerbit"
                     android:inputType="textPassword"
                     android:padding="8dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textColorHint="#87BFC9"
                     android:textSize="15sp" />
 
             </android.support.v7.widget.CardView>
@@ -142,13 +133,11 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"
-                    android:background="#ECFCFF"
                     android:drawableLeft="@drawable/ic_lock_black_24dp"
                     android:hint="ISBN"
                     android:inputType="textPassword"
+                    android:background="@android:color/transparent"
                     android:padding="8dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textColorHint="#87BFC9"
                     android:textSize="15sp" />
 
             </android.support.v7.widget.CardView>

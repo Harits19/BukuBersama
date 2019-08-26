@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailBukuYangDipinjamActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativelayout1"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/buku2" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#6F000000" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/buku1"
+            android:layout_width="165dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:padding="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/buku2" />
+
+    </RelativeLayout>
+
+    <!--<ImageView-->
+    <!--android:id="@+id/relativelayout2"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:scaleType="centerCrop"-->
+    <!--android:src="@drawable/backgroundwhite" />-->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativelayout1"
+        android:layout_above="@id/editDetailBukuButton"
+        android:layout_margin="10dp"
+        android:background="@drawable/layout_round_corner_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/judulBuku"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relativelayout1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Handbook Jaringan Komputer : Teori dan Praktek Berbasiskan Open Source"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="25sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/penulis"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/judulBuku"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="By Tere Liye"
+                android:textColor="#797979"
+                android:textSize="20sp"
+                android:typeface="serif" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="8dp"
+                android:background="#f0f0f0" />
+
+            <!--87BFC9-->
+
+
+            <TextView
+                android:id="@+id/penerbit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/isbn"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="PT Gramedia Pustaka"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:typeface="serif" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="8dp"
+                android:background="#f0f0f0" />
+
+            <TextView
+                android:id="@+id/isbn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="ISBN 817525766-0"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:typeface="serif" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="8dp"
+                android:background="#f0f0f0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/hargaSewaTextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="Sewa"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="normal"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="Rp 3.000,-/ Hari"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="Jaminan"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="normal"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/jaminanTextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="Rp 75.000,-"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/Pesan"
+        style="@style/CustomButton1"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:onClick="ShowPopup"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="-10dp"
+        android:elevation="1dp"
+        android:text="Pesan"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/Pinjam"
+        style="@style/CustomButton2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/Pesan"
+        android:layout_alignParentBottom="true"
+        android:onClick="ShowPopup"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:elevation="1dp"
+        android:text="Tukar"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="normal" />
+
+
+</RelativeLayout>
