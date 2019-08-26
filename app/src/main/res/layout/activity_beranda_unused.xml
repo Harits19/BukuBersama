@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".BerandaActivity">
+    tools:context=".BerandaActivityUnused">
+
 
     <!--<android.support.constraint.ConstraintLayout-->
     <!--android:id="@+id/relativelayout2"-->
@@ -120,7 +121,7 @@
         android:id="@+id/notifikasi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorWhite">
+        android:visibility="gone">
 
         <TextView
             android:layout_width="wrap_content"
@@ -128,17 +129,19 @@
             android:layout_centerInParent="true"
             android:padding="15dp"
             android:text="Beranda"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="20sp"
             android:textStyle="normal" />
     </RelativeLayout>
 
     <ScrollView
+        android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/notifikasi">
 
         <RelativeLayout
+            android:id="@+id/relative1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -167,6 +170,7 @@
                         android:textSize="12sp" />
 
                     <TextView
+                        android:id="@+id/jumlahBukuDipinjam_textView"
                         android:layout_width="100dp"
                         android:layout_height="fill_parent"
                         android:gravity="center"
@@ -194,6 +198,7 @@
                         android:textSize="12sp" />
 
                     <TextView
+                        android:id="@+id/jumlahMeminjamBuku_textView"
                         android:layout_width="100dp"
                         android:layout_height="fill_parent"
                         android:gravity="center"
@@ -223,6 +228,7 @@
                         android:textSize="12sp" />
 
                     <TextView
+                        android:id="@+id/jumlahKoleksiBuku_textView"
                         android:layout_width="100dp"
                         android:layout_height="fill_parent"
                         android:gravity="center"
@@ -237,11 +243,11 @@
             </LinearLayout>
 
             <RelativeLayout
-                android:id="@+id/relative1"
+                android:id="@+id/relative2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/linear1"
-                android:layout_marginTop="10dp"
+                android:layout_margin="10dp"
                 android:background="@color/colorWhite">
 
                 <RelativeLayout
@@ -250,7 +256,7 @@
                     android:layout_centerHorizontal="true">
 
                     <android.support.v7.widget.CardView
-                        android:id="@+id/pinjam"
+                        android:id="@+id/pinjamBuku_button"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:layout_margin="10dp">
@@ -270,11 +276,11 @@
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
-                        android:id="@+id/tuker"
+                        android:id="@+id/tukarBuku_button"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:layout_margin="10dp"
-                        android:layout_toRightOf="@id/pinjam">
+                        android:layout_toRightOf="@id/pinjamBuku_button">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -291,10 +297,10 @@
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
-                        android:id="@+id/koleksi"
+                        android:id="@+id/koleksiBuku_button"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:layout_below="@id/pinjam"
+                        android:layout_below="@id/pinjamBuku_button"
                         android:layout_margin="10dp">
 
                         <RelativeLayout
@@ -312,12 +318,12 @@
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
-                        android:id="@+id/challenge"
+                        android:id="@+id/tantangan_button"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:layout_below="@+id/tuker"
+                        android:layout_below="@+id/tukarBuku_button"
                         android:layout_margin="10dp"
-                        android:layout_toRightOf="@id/koleksi">
+                        android:layout_toRightOf="@id/koleksiBuku_button">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -327,7 +333,6 @@
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
                                 android:layout_centerInParent="true"
-                                android:scaleType="fitCenter"
                                 android:src="@drawable/tantangan" />
 
                         </RelativeLayout>
@@ -337,14 +342,44 @@
                 </RelativeLayout>
             </RelativeLayout>
 
+            <TextView
+                android:id="@+id/tantanganHint_textView"
+                android:layout_below="@+id/relative2"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tantangan"/>
+
+
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/beritarecycleview"
+                android:id="@+id/tantangan_recycleView"
                 android:layout_width="match_parent"
-                android:background="@color/colorWhite"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/relative1"
+                android:layout_below="@+id/tantanganHint_textView"
+                android:background="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/berita_textView"
+                android:layout_below="@+id/tantangan_recycleView"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Berita"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/berita_recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/berita_textView"
+                android:background="@color/colorWhite"
                 android:orientation="horizontal" />
+
 
             <!--<Button-->
             <!--android:id="@+id/pinjamBukuButton"-->

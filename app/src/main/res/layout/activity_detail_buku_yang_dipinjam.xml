@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
     tools:context=".DetailBukuYangDipinjamActivity">
 
     <RelativeLayout
@@ -56,7 +55,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/relativelayout1"
-        android:layout_margin="8dp"
+        android:layout_above="@id/editDetailBukuButton"
+        android:layout_margin="10dp"
         android:background="@drawable/layout_round_corner_bg">
 
         <LinearLayout
@@ -195,22 +195,25 @@
                     android:typeface="serif" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/editDetailBukuButton"
-                style="@style/CustomButton1"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_alignParentBottom="true"
-                android:onClick="ShowPopup"
-                android:elevation="1dp"
-                android:text="Pinjam"
-                android:textAllCaps="false"
-                android:textSize="20sp"
-                android:textStyle="normal" />
+
 
         </LinearLayout>
 
     </ScrollView>
+
+    <Button
+        android:id="@+id/editDetailBukuButton"
+        style="@style/CustomButton1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:onClick="ShowPopup"
+        android:layout_margin="10dp"
+        android:elevation="1dp"
+        android:text="Pinjam"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="normal" />
 
 
 </RelativeLayout>

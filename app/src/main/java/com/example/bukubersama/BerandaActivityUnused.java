@@ -1,40 +1,47 @@
 package com.example.bukubersama;
 
-import android.content.Intent;
-import android.os.Build;
+//ACTIVITY TIDAK TERPAKAI
+
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
-public class BerandaActivity extends AppCompatActivity {
+public class BerandaActivityUnused extends AppCompatActivity {
 
     private LinearLayout koleksiLayout;
     private Button pinjamBukuButton, topUpButton;
     private RelativeLayout profileLayout;
-    private RecyclerView recyclerView;
-    private BeritaAdapter adapter;
+    private RecyclerView recyclerViewBerita, recyclerViewTantangan;
+    private BeritaAdapter beritaAdapter;
+    private TantanganAdapter tantanganAdapter;
     private ArrayList<Berita> beritaArrayList;
+    private ArrayList<Tantangan> tantanganArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_beranda);
+        setContentView(R.layout.activity_beranda_unused);
 
-        addData();
-        recyclerView = findViewById(R.id.beritarecycleview);
-        adapter = new BeritaAdapter(beritaArrayList);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(BerandaActivity.this);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(adapter);
+        addDataBerita();
+        recyclerViewBerita = findViewById(R.id.berita_recycleView);
+        beritaAdapter = new BeritaAdapter(beritaArrayList);
+        RecyclerView.LayoutManager layoutManagerBerita = new LinearLayoutManager(BerandaActivityUnused.this);
+        recyclerViewBerita.setLayoutManager(layoutManagerBerita);
+        recyclerViewBerita.setAdapter(beritaAdapter);
+
+        addDataTantangan();
+        recyclerViewTantangan = findViewById(R.id.tantangan_recycleView);
+        tantanganAdapter = new TantanganAdapter(tantanganArrayList);
+        RecyclerView.LayoutManager layoutManagerTantangan = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewTantangan.setLayoutManager(layoutManagerTantangan);
+        recyclerViewTantangan.setAdapter(tantanganAdapter);
 
 //        topUpButton = findViewById(R.id.topupButton);
 //        koleksiLayout = findViewById(R.id.koleksiLayout);
@@ -81,12 +88,21 @@ public class BerandaActivity extends AppCompatActivity {
 
     }
 
-    void addData() {
+    void addDataBerita() {
         beritaArrayList = new ArrayList<>();
         beritaArrayList.add(new Berita("AA"));
         beritaArrayList.add(new Berita("BB"));
         beritaArrayList.add(new Berita("CC"));
         beritaArrayList.add(new Berita("DD"));
+
+    }
+
+    void addDataTantangan() {
+        tantanganArrayList = new ArrayList<>();
+        tantanganArrayList.add(new Tantangan("AA"));
+        tantanganArrayList.add(new Tantangan("BB"));
+        tantanganArrayList.add(new Tantangan("CC"));
+        tantanganArrayList.add(new Tantangan("DD"));
 
     }
 }

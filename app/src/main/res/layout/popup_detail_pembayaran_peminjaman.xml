@@ -171,12 +171,12 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center">
 
-                <EditText
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:background="#ECFCFF"
-                    android:hint="2"
-                    android:inputType="textPassword"
+                    android:gravity="center"
+                    android:hint="0"
                     android:textAlignment="center"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/colorPrimaryDark"

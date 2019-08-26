@@ -2,6 +2,7 @@ package com.example.bukubersama;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.WindowManager;
 
 public class TopUpActivity extends AppCompatActivity {
 
@@ -9,5 +10,6 @@ public class TopUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_top_up);
+
     }
 }
