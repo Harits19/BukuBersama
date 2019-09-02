@@ -6,11 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".EditProfileActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/transaksi_recycleView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/tabLayout_tantangan" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Tukar"/>
+
+<!--    <android.support.v7.widget.RecyclerView-->
+<!--        android:id="@+id/transaksi_recycleView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_below="@+id/tabLayout_tantangan" />-->
 
 
 </RelativeLayout>

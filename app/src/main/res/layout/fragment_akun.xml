@@ -126,7 +126,7 @@
                     android:text="hilmi123@gmail.com"
                     android:layout_marginRight="15dp"
                     android:layout_toRightOf="@id/profile_imageview"
-                    android:textColor="@color/colorGrey"
+                    android:textColor="#000"
                     android:textSize="15sp"
                     android:textStyle="normal" />
 
@@ -138,7 +138,7 @@
                     android:layout_marginRight="15dp"
                     android:layout_toRightOf="@id/profile_imageview"
                     android:text="083040493111"
-                    android:textColor="@color/colorGrey"
+                    android:textColor="#000"
                     android:textStyle="normal" />
 
                 <TextView
@@ -163,7 +163,7 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginBottom="15dp"
                     android:layout_alignParentLeft="true"
-                    android:src="@drawable/ic_profile" />
+                    android:src="@drawable/people" />
 
             </RelativeLayout>
 
@@ -185,6 +185,7 @@
                 android:textStyle="bold" />
 
                 <Button
+                    android:id="@+id/unggah_button"
                     android:layout_width="35dp"
                     style="@style/CustomButton1"
                     android:layout_height="35dp"
