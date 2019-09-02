@@ -5,6 +5,9 @@
     <color name="colorAccent">#189597</color>x
     <color name="colorWhite">#FFF</color>
     <color name="colorHighlight">#4CAF50</color>
+    <color name="colorGrey">#BDBDBD</color>
+    <color name="colorGrey2">#FAFAFA</color>
+
 
     <color name="colorNavigationIcon">#dae9f6</color>
     <color name="colorNavigationText">#ffffff</color>

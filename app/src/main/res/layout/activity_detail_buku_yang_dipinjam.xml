@@ -55,7 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/relativelayout1"
-        android:layout_above="@id/editDetailBukuButton"
+        android:layout_above="@id/pesan_button"
         android:layout_margin="10dp"
         android:background="@drawable/layout_round_corner_bg">
 
@@ -202,12 +202,11 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/Pesan"
+        android:id="@+id/pesan_button"
         style="@style/CustomButton1"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:onClick="ShowPopup"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
@@ -219,13 +218,12 @@
         android:textStyle="normal" />
 
     <Button
-        android:id="@+id/Pinjam"
+        android:id="@+id/pinjam_button"
         style="@style/CustomButton2"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
-        android:layout_toRightOf="@id/Pesan"
+        android:layout_toRightOf="@id/pesan_button"
         android:layout_alignParentBottom="true"
-        android:onClick="ShowPopup"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:layout_marginRight="10dp"

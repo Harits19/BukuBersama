@@ -4,10 +4,22 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="android:textViewStyle">@style/AppTheme.Widget.TextView</item>
-
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="AppTheme.Widget.TextView" parent="android:Widget.Holo.Light.TextView">
+        <item name="fontPath">fonts/helvetica_medium.ttf</item>
+    </style>
+
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="fontPath">fonts/helvetica_medium.ttf</item>
     </style>
 
     <style name="CustomButton1" parent="Widget.AppCompat.Button">
@@ -41,11 +53,13 @@
     </style>
 
 
-
     <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">14sp</item>
-        <item name="android:textColor">#fff</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textStyle">normal</item>
+
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 
     <style name="AllCapsFalse" parent="TextAppearance.Design.Tab">
@@ -53,11 +67,5 @@
         <item name="android:textAllCaps">false</item>
     </style>
 
-
-    <style name="AppTheme.Widget"/>
-
-    <style name="AppTheme.Widget.TextView" parent="android:Widget.Holo.Light.TextView">
-        <item name="fontPath">fonts/continum.ttf</item>
-    </style>
 
 </resources>

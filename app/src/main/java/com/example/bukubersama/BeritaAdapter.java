@@ -1,6 +1,7 @@
 package com.example.bukubersama;
 
 
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,7 +29,6 @@ public class BeritaAdapter extends RecyclerView.Adapter<BeritaAdapter.BeritaView
     @Override
     public void onBindViewHolder(BeritaViewHolder holder, int position) {
 //        holder.judul.setText(dataList.get(position).getJudul());
-
     }
 
     @Override
@@ -38,6 +38,7 @@ public class BeritaAdapter extends RecyclerView.Adapter<BeritaAdapter.BeritaView
 
     public class BeritaViewHolder extends RecyclerView.ViewHolder {
         private TextView judul;
+
 
         public BeritaViewHolder(View itemView) {
             super(itemView);

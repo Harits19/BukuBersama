@@ -1,6 +1,8 @@
 package com.example.bukubersama;
 
 
+import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,9 +14,9 @@ import java.util.ArrayList;
 public class BukuAdapter extends RecyclerView.Adapter<BukuAdapter.BukuViewHolder> {
 
 
-    private ArrayList<Buku> dataList;
+    private ArrayList<PeminjamanBuku> dataList;
 
-    public BukuAdapter(ArrayList<Buku> dataList) {
+    public BukuAdapter(ArrayList<PeminjamanBuku> dataList) {
         this.dataList = dataList;
     }
 
@@ -29,6 +31,7 @@ public class BukuAdapter extends RecyclerView.Adapter<BukuAdapter.BukuViewHolder
     public void onBindViewHolder(BukuViewHolder holder, int position) {
 //        holder.judul.setText(dataList.get(position).getJudul());
 
+
     }
 
     @Override
@@ -37,11 +40,31 @@ public class BukuAdapter extends RecyclerView.Adapter<BukuAdapter.BukuViewHolder
     }
 
     public class BukuViewHolder extends RecyclerView.ViewHolder {
+        private CardView cardView1, cardView2;
         private TextView judul;
 
-        public BukuViewHolder(View itemView) {
+        public BukuViewHolder(final View itemView) {
             super(itemView);
             judul = itemView.findViewById(R.id.judulBuku);
+            cardView1 = itemView.findViewById(R.id.cardview1);
+            cardView2 = itemView.findViewById(R.id.cardview2);
+
+            cardView1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    itemView.getContext().startActivity(new Intent(itemView.getContext(), DetailBukuYangDipinjamActivity.class));
+                }
+            });
+
+            cardView2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    itemView.getContext().startActivity(new Intent(itemView.getContext(), DetailBukuYangDipinjamActivity.class));
+                }
+            });
+
+
+
         }
     }
 }

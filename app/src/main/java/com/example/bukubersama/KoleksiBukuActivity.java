@@ -31,24 +31,6 @@ public class KoleksiBukuActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(KoleksiBukuActivity.this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
-//        tambahKoleksiBuku = findViewById(R.id.tambahKoleksiButton);
-//        detailBukuButton = findViewById(R.id.detailBukuButton);
-//
-//
-//        tambahKoleksiBuku.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(KoleksiBukuActivity.this, UnggahBukuActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//        detailBukuButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(KoleksiBukuActivity.this, DetailBukuActivity.class);
-//                startActivity(intent);
-//            }
-//        });
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);

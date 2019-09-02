@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity">
+
+    <TextView
+        android:id="@+id/textView_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+
+        android:text="Transaksi"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp" />
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout_tantangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_top"
+        android:scrollbars="horizontal"
+        app:tabGravity="fill"
+        app:tabMaxWidth="0dp"
+        app:tabIndicatorColor="@color/colorPrimaryDark"
+        app:tabTextColor="@color/colorGrey"
+        app:tabSelectedTextColor="@color/colorPrimaryDark"
+        app:tabTextAppearance="@style/TextAppearance"
+        app:tabMode="fixed" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager_tantangan"
+        android:layout_below="@+id/tabLayout_tantangan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/transaksi_recycleView"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/tabLayout_tantangan" />
+
+
+</RelativeLayout>

@@ -10,7 +10,7 @@ public class FontChange extends Application {
     public void onCreate() {
         super.onCreate();
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/continum_bold.ttf")
+                .setDefaultFontPath("fonts/helvetica_medium.ttf")
                 .setFontAttrId(R.attr.fontPath)
                 .build()
         );

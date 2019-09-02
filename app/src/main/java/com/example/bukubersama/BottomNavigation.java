@@ -1,25 +1,34 @@
 package com.example.bukubersama;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class BottomNavigation extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
-//    @Override
-//    protected void attachBaseContext(Context newBase) {
-//        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-//    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bottom_navigation);
+
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/helvetica_bold.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build()
+        );
 
         loadFragment(new BerandaFragment());
 // inisialisasi BottomNavigaionView
@@ -46,7 +55,7 @@ public class BottomNavigation extends AppCompatActivity implements BottomNavigat
                 fragment = new BerandaFragment();
                 break;
             case R.id.transaksi_menu:
-                fragment = new BerandaFragment();
+                fragment = new TransaksiFragment();
                 break;
             case R.id.pesan_menu:
                 fragment = new BerandaFragment();
@@ -57,4 +66,6 @@ public class BottomNavigation extends AppCompatActivity implements BottomNavigat
         }
         return loadFragment(fragment);
     }
+
+
 }

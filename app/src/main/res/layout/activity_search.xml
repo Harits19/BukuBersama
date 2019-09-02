@@ -5,7 +5,7 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PinjamBukuActivity">
+    tools:context=".SearchActivity">
 
     <RelativeLayout
         android:id="@+id/notifikasi"
@@ -25,54 +25,44 @@
             android:textStyle="normal" />
     </RelativeLayout>
 
-    <RelativeLayout
+    <FrameLayout
+        android:id="@+id/framelayout1"
         android:layout_width="match_parent"
-        android:id="@+id/relativeSearch"
-        android:background="@color/colorWhite"
-        android:layout_height="wrap_content">
-        <FrameLayout
+        android:layout_height="40dp"
+        android:layout_below="@id/notifikasi"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp">
 
-            android:id="@+id/framelayout1"
+
+        <EditText
+
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="#FAFAFA"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="8dp">
+            android:layout_height="fill_parent"
+            android:background="@drawable/layout_round_corner_bg"
+            android:drawableLeft="@drawable/ic_search_black_24dp"
+            android:hint="Search..."
+            android:padding="8dp"
+            android:textSize="15sp" />
 
 
-            <TextView
+        <ImageButton
+            style="@style/CustomButton1"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_search_black_24dp" />
 
-
-                android:layout_width="match_parent"
-                android:layout_height="fill_parent"
-                android:hint="Search..."
-                android:gravity="center_vertical"
-                android:paddingLeft="8dp"
-                android:enabled="false"
-                android:textSize="15sp" />
-
-
-            <ImageButton
-                style="@style/CustomButton1"
-                android:layout_width="40dp"
-                android:layout_height="fill_parent"
-
-                android:layout_gravity="right"
-                android:src="@drawable/ic_search_black_24dp" />
-
-        </FrameLayout>
-
-    </RelativeLayout>
-
+    </FrameLayout>
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tabLayout"
         style="@style/AllCapsFalse"
         android:layout_width="wrap_content"
+        android:visibility="gone"
         android:layout_height="40dp"
-        android:layout_below="@id/relativeSearch"
+        android:layout_below="@id/framelayout1"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="8dp"
@@ -81,11 +71,12 @@
         app:tabIndicatorHeight="0dp"
         app:tabMode="scrollable"
         app:tabRippleColor="@null"
-        app:tabSelectedTextColor="@color/colorGrey2"
+        app:tabSelectedTextColor="@color/colorPrimaryDark"
         app:tabTextAppearance="@style/TabTextAppearance" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/bukuLayout"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/tabLayout"

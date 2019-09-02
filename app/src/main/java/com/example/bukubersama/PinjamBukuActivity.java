@@ -1,20 +1,15 @@
 package com.example.bukubersama;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.TextView;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
@@ -22,11 +17,11 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class PinjamBukuActivity extends AppCompatActivity {
 
-    Dialog myDialog;
-
     private RecyclerView recyclerView;
     private BukuAdapter adapter;
-    private ArrayList<Buku> bukuArrayList;
+    RelativeLayout relativeLayoutSearch;
+    private ArrayList<PeminjamanBuku> bukuArrayList;
+    private CardView cardView1, cardView2;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -38,10 +33,14 @@ public class PinjamBukuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pinjam_buku);
+        relativeLayoutSearch = findViewById(R.id.relativeSearch);
 
-
-        //Konfigurasi PopUp
-        myDialog = new Dialog(this);
+        relativeLayoutSearch.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(PinjamBukuActivity.this,SearchActivity.class));
+            }
+        });
 
         //Konfigurasi Recycleview
         addData();
@@ -63,21 +62,14 @@ public class PinjamBukuActivity extends AppCompatActivity {
 
     }
 
-    //Konfigurasi PopUp
-    public void ShowPopup(View v) {
-        TextView txtclose;
-        myDialog.setContentView(R.layout.popup_detail_pembayaran_peminjaman);
-        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        myDialog.show();
-    }
 
     //Konfigurasi Recycleview
     void addData() {
         bukuArrayList = new ArrayList<>();
-        bukuArrayList.add(new Buku("AA"));
-        bukuArrayList.add(new Buku("BB"));
-        bukuArrayList.add(new Buku("CC"));
-        bukuArrayList.add(new Buku("DD"));
+        bukuArrayList.add(new PeminjamanBuku("AA"));
+        bukuArrayList.add(new PeminjamanBuku("BB"));
+        bukuArrayList.add(new PeminjamanBuku("CC"));
+        bukuArrayList.add(new PeminjamanBuku("DD"));
 
     }
 

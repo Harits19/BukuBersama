@@ -1,6 +1,7 @@
 package com.example.bukubersama;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
@@ -24,6 +26,14 @@ public class BerandaFragment extends Fragment {
     private TantanganAdapter tantanganAdapter;
     private ArrayList<Berita> beritaArrayList;
     private ArrayList<Tantangan> tantanganArrayList;
+    private ImageButton pinjamButton, tukarButton, tantanganButton, koleksiButton;
+
+    RelativeLayout relativeLayoutSearch;
+
+
+
+
+
 
 
 
@@ -31,6 +41,50 @@ public class BerandaFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_beranda, container, false);
+
+
+        relativeLayoutSearch = view.findViewById(R.id.relativeSearch);
+        pinjamButton = view.findViewById(R.id.pinjamBuku_button);
+        tukarButton = view.findViewById(R.id.tukarBuku_button);
+        tantanganButton = view.findViewById(R.id.tantangan_button);
+        koleksiButton = view.findViewById(R.id.koleksiBuku_button);
+
+        relativeLayoutSearch.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(getActivity(),SearchActivity.class));
+            }
+        });
+
+        pinjamButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(getActivity(),PinjamBukuActivity.class));
+            }
+        });
+
+        tukarButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(getActivity(),PinjamBukuActivity.class));
+            }
+        });
+
+        tantanganButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(getActivity(),TantanganActivity.class));
+            }
+        });
+
+        koleksiButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(getActivity(),KoleksiBukuActivity.class));
+            }
+        });
+
+
 
 
         addDataBerita();
@@ -68,4 +122,6 @@ public class BerandaFragment extends Fragment {
         tantanganArrayList.add(new Tantangan("DD"));
 
     }
+
+
 }

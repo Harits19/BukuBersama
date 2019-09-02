@@ -9,24 +9,24 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class KoleksiAdapter extends RecyclerView.Adapter<KoleksiAdapter.KoleksiViewHolder> {
+public class TransaksiAdapter extends RecyclerView.Adapter<TransaksiAdapter.TransaksiViewHolder> {
 
 
-    private ArrayList<Koleksi> dataList;
+    private ArrayList<Transaksi> dataList;
 
-    public KoleksiAdapter(ArrayList<Koleksi> dataList) {
+    public TransaksiAdapter(ArrayList<Transaksi> dataList) {
         this.dataList = dataList;
     }
 
     @Override
-    public KoleksiViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public TransaksiViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.recycleview_koleksi_buku_akun, parent, false);
-        return new KoleksiViewHolder(view);
+        View view = layoutInflater.inflate(R.layout.recycleview_transaksi_pinjam_dan_tukar, parent, false);
+        return new TransaksiViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(KoleksiViewHolder holder, int position) {
+    public void onBindViewHolder(TransaksiViewHolder holder, int position) {
 //        holder.judul.setText(dataList.get(position).getJudul());
 
     }
@@ -36,10 +36,10 @@ public class KoleksiAdapter extends RecyclerView.Adapter<KoleksiAdapter.KoleksiV
         return (dataList != null) ? dataList.size() : 0;
     }
 
-    public class KoleksiViewHolder extends RecyclerView.ViewHolder {
+    public class TransaksiViewHolder extends RecyclerView.ViewHolder {
         private TextView judul;
 
-        public KoleksiViewHolder(View itemView) {
+        public TransaksiViewHolder(View itemView) {
             super(itemView);
             judul = itemView.findViewById(R.id.judulBuku);
         }

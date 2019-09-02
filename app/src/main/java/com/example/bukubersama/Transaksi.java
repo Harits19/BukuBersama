@@ -2,12 +2,12 @@ package com.example.bukubersama;
 
 import android.widget.ImageView;
 
-public class Buku {
+public class Transaksi {
 
     private String judul, pengarang, hargaSewa;
     private ImageView gambarBuku;
 
-    public Buku(String judul) {
+    public Transaksi(String judul) {
         this.judul = judul;
 
     }

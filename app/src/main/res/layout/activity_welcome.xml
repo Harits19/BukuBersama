@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="50dp"
+            android:src="@drawable/welcome_screen"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="10dp"
+            android:text="Selamat datang di BukuBersama!"
+            android:textColor="#000"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="10dp"
+            android:text="Mau pinjam buku ? BukuBersama aja !"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/masuk_button"
+            style="@style/CustomButton1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Masuk"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/daftar_button"
+            style="@style/CustomButton1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="fill_parent"
+            android:layout_toRightOf="@id/masuk_button"
+            android:layout_height="wrap_content"
+            android:text="Daftar"
+            android:textStyle="bold" />
+        </RelativeLayout>
+        <Button
+            android:id="@+id/facebookLogin_button"
+            style="@style/CustomButton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:text="Masuk Dengan Facebook"
+            android:textSize="15sp"
+            />
+
+        <Button
+            android:id="@+id/googleLogin_button"
+            style="@style/CustomButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            android:text="Masuk Dengan Google"
+            android:drawableLeft="@drawable/logo_google"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

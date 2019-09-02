@@ -5,218 +5,240 @@
     android:layout_height="match_parent"
     tools:context=".EditProfileActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:background="@drawable/layout_round_corner_bg" />
-
-    <RelativeLayout
-        android:id="@+id/notifikasi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:background="@color/colorAccent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:padding="15dp"
-            android:text="Akun"
-            android:textColor="#fff"
-            android:textSize="20sp"
-            android:textStyle="normal" />
-    </RelativeLayout>
-    <FrameLayout
-        android:id="@+id/framelayout1"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_below="@id/notifikasi"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="8dp">
-
-
-        <EditText
-
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:background="@drawable/layout_round_corner_bg"
-            android:drawableLeft="@drawable/ic_search_black_24dp"
-            android:hint="Search..."
-            android:padding="8dp"
-            android:textSize="15sp" />
-
-
-        <ImageButton
-            style="@style/CustomButton1"
-            android:layout_width="40dp"
-            android:layout_height="fill_parent"
-            android:layout_gravity="right"
-            android:src="@drawable/ic_search_black_24dp" />
-
-    </FrameLayout>
-
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-       android:layout_below="@+id/framelayout1">
+        android:layout_height="wrap_content">
 
-
-        <RelativeLayout
-            android:id="@+id/editprofile_layout"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true">
+            android:orientation="vertical">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile_imageview"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+
+
+
+            <RelativeLayout
+                android:id="@+id/profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/ic_profile" />
+                android:background="@color/colorWhite">
+            <!--            <LinearLayout-->
+                <!--                android:id="@+id/linear1"-->
+                <!--                android:layout_width="300dp"-->
+                <!--                android:layout_height="100dp"-->
+                <!--                android:layout_below="@id/nomorhp_textview"-->
+                <!--                android:layout_centerHorizontal="true"-->
+                <!--                android:layout_margin="10dp"-->
+                <!--                android:background="@drawable/layout_round_corner_bg"-->
+                <!--                android:elevation="1dp"-->
+                <!--                android:orientation="horizontal">-->
 
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="100dp"-->
+                <!--                    android:layout_height="100dp"-->
+                <!--                    android:orientation="vertical">-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="100dp"-->
+                <!--                        android:layout_height="40dp"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:text="Dipinjam"-->
+                <!--                        android:textAlignment="center"-->
+                <!--                        android:textColor="@color/colorPrimary"-->
+                <!--                        android:textSize="12sp" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="100dp"-->
+                <!--                        android:layout_height="fill_parent"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:text="2"-->
+                <!--                        android:textAlignment="center"-->
+                <!--                        android:textColor="@color/colorPrimaryDark"-->
+                <!--                        android:textSize="30sp"-->
+                <!--                        android:textStyle="bold" />-->
+
+
+                <!--                </LinearLayout>-->
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="100dp"-->
+                <!--                    android:layout_height="100dp"-->
+                <!--                    android:orientation="vertical">-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="100dp"-->
+                <!--                        android:layout_height="40dp"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:text="Meminjam"-->
+                <!--                        android:textAlignment="center"-->
+                <!--                        android:textColor="@color/colorPrimary"-->
+                <!--                        android:textSize="12sp" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="100dp"-->
+                <!--                        android:layout_height="fill_parent"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:text="15"-->
+                <!--                        android:textAlignment="center"-->
+                <!--                        android:textColor="@color/colorPrimaryDark"-->
+                <!--                        android:textSize="30sp"-->
+                <!--                        android:textStyle="bold" />-->
+
+
+                <!--                </LinearLayout>-->
+
+                <!--                <LinearLayout-->
+                <!--                    android:id="@+id/koleksiLayout"-->
+                <!--                    android:layout_width="100dp"-->
+                <!--                    android:layout_height="100dp"-->
+                <!--                    android:clickable="true"-->
+                <!--                    android:orientation="vertical">-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="100dp"-->
+                <!--                        android:layout_height="40dp"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:text="Koleksi"-->
+                <!--                        android:textAlignment="center"-->
+                <!--                        android:textColor="@color/colorPrimary"-->
+                <!--                        android:textSize="12sp" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="100dp"-->
+                <!--                        android:layout_height="fill_parent"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:text="7"-->
+                <!--                        android:textAlignment="center"-->
+                <!--                        android:textColor="@color/colorPrimaryDark"-->
+                <!--                        android:textSize="30sp"-->
+                <!--                        android:textStyle="bold" />-->
+
+                <!--                </LinearLayout>-->
+
+                <!--            </LinearLayout>-->
+
+                <TextView
+                    android:id="@+id/email_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nama_textview"
+                    android:text="hilmi123@gmail.com"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@id/profile_imageview"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/nomorhp_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/email_textview"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@id/profile_imageview"
+                    android:text="083040493111"
+                    android:textColor="@color/colorGrey"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/nama_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="Hilmi Aziz Bukhori"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@id/profile_imageview"
+                    android:textColor="#000"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_imageview"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_profile" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="15dp"
+
+                android:layout_below="@+id/profile_layout"
+                android:layout_height="wrap_content">
             <TextView
-                android:id="@+id/nama_textview"
+                android:id="@+id/koleksi_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/profile_imageview"
-                android:layout_centerHorizontal="true"
-                android:text="Hilmi Aziz Bukhori"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="30sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/email_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/nama_textview"
-                android:layout_centerHorizontal="true"
-                android:text="hilmi123@gmail.com"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/nomorhp_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/email_textview"
-                android:layout_centerHorizontal="true"
-                android:text="083040493111"
-                android:textColor="@color/colorAccent"
+                android:padding="15dp"
+                android:text="Koleksi Buku"
+                android:textColor="#000"
                 android:textSize="15sp"
-                android:textStyle="normal" />
+                android:textStyle="bold" />
 
-            <LinearLayout
-                android:id="@+id/linear1"
-                android:layout_width="300dp"
-                android:layout_height="100dp"
-                android:layout_below="@id/nomorhp_textview"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="10dp"
-                android:background="@drawable/layout_round_corner_bg"
-                android:elevation="1dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="40dp"
-                        android:gravity="center"
-                        android:text="Dipinjam"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="fill_parent"
-                        android:gravity="center"
-                        android:text="2"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
+                <Button
+                    android:layout_width="35dp"
+                    style="@style/CustomButton1"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:text="+"
+                    android:gravity="center"
+                    android:layout_marginRight="15dp"
+                    />
 
 
-                </LinearLayout>
+            </RelativeLayout>
 
-                <LinearLayout
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:orientation="vertical">
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f0f0f0" />
 
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="40dp"
-                        android:gravity="center"
-                        android:text="Meminjam"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="12sp" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/koleksi_recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/koleksi_textView"
+                android:background="@color/colorWhite" />
 
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="fill_parent"
-                        android:gravity="center"
-                        android:text="15"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_below="@+id/linear1"
+                android:layout_marginTop="15dp">
 
 
-                </LinearLayout>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/linear1"
+                    android:layout_margin="10dp" />
+            </RelativeLayout>
 
-                <LinearLayout
-                    android:id="@+id/koleksiLayout"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:clickable="true"
-                    android:orientation="vertical">
+            <Button
+                android:id="@+id/logout_Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorWhite"
+                android:text="Logout"
+                android:textAllCaps="false"
+                android:textColor="#FF0000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="40dp"
-                        android:gravity="center"
-                        android:text="Koleksi"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="fill_parent"
-                        android:gravity="center"
-                        android:text="7"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-            <com.github.mikephil.charting.charts.BarChart
-                android:id="@+id/chart"
-                android:layout_below="@id/linear1"
-                android:layout_centerHorizontal="true"
-                android:layout_width="300dp"
-                android:layout_height="250dp" />
-
-        </RelativeLayout>
+        </LinearLayout>
 
     </ScrollView>
 

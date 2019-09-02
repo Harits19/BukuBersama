@@ -9,37 +9,38 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BottomNavigation">
-
-        </activity>
-        <activity android:name=".DetailBukuYangDipinjamActivity" />
-        <activity android:name=".DetailBukuActivity" />
-        <activity android:name=".EditProfileActivity" />
-        <activity android:name=".KoleksiBukuActivity">
-
-        </activity>
-        <activity
-            android:name=".TopUpActivity"
-            android:windowSoftInputMode="adjustPan">
-
-        </activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".UnggahBukuActivity" />
-        <activity android:name=".PinjamBukuActivity">
+        <activity android:name=".TantanganActivity"></activity>
+        <activity android:name=".LoginHpActivity" />
+        <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BerandaActivityUnused">
-
-        </activity>
+        <activity android:name=".PesanActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".BottomNavigation"></activity>
+        <activity android:name=".DetailBukuYangDipinjamActivity" />
+        <activity android:name=".DetailBukuActivity" />
+        <activity android:name=".EditProfileActivity" />
+        <activity android:name=".KoleksiBukuActivity" />
+        <activity
+            android:name=".TopUpActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".UnggahBukuActivity" />
+        <activity android:name=".PinjamBukuActivity" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity" />
     </application>
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
 
 </manifest>
